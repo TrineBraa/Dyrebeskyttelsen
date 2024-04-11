@@ -9,5 +9,9 @@ function adoptableDogView(){
     <div id="titleContainer">
     <h1>Tilgjengelige for Adopsjon</h1>
     </div>
+
+
+
+    ${makeFooter()}
     `; 
 }

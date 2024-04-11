@@ -9,5 +9,8 @@ function contactView(){
     <div id="titleContainer">
         <h1>Kontakt oss</h1>
         </div>
+
+
+        ${makeFooter()}
     `; 
 }

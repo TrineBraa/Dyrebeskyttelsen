@@ -6,5 +6,11 @@ function adoptedView(){
         <button class="mainButton" onclick = "adoptableDogView()">Tilgjengelige Hunder</button>
         <button class="mainButton, activeButton" onclick = "adoptedView()">Adopterte Hunder</button>
     </div>
+    <div id="titleContainer">
+    <h1>Adopterte Hunder</h1>
+    </div>
+
+
+    ${makeFooter()}
    `;
 }
