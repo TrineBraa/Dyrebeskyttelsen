@@ -3,14 +3,20 @@ function mainView(){
     document.getElementById("app").innerHTML = /*HTML*/`
     ${makeHeader()}
     <div id="mainButtonContainer">
-    <button class="mainButton" onclick = "contactView()">Kontakt oss</button>
-    <button class="mainButton" onclick = "adoptableDogView()">Tilgjengelige Hunder</button>
-    <button class="mainButton" onclick = "adoptedView()">Adopterte Hunder</button>
-</div>
-    <br/>
+        <button class="mainButton" onclick = "contactView()">Kontakt oss</button>
+        <button class="mainButton" onclick = "adoptableDogView()">Tilgjengelige Hunder</button>
+        <button class="mainButton" onclick = "adoptedView()">Adopterte Hunder</button>
+    </div>
+    <div id="titleContainer">
+        <h1>Dyrebeskyttelsen Norge</h1>
+    </div>
 
+
+
+    ${makeFooter()}
     `;
 }
+
 
 
 function makeHeader(){
@@ -23,6 +29,14 @@ function makeHeader(){
         <button id="searchButton">Søk</button>
    </div>
   
-    `
-    return html
+    `;
+    return html;
+}
+
+function makeFooter(){
+    let html = /*html*/ `
+    <div class ="footer">
+    </div>
+    `;
+    return html;
 }

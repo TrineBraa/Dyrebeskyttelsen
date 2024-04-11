@@ -20,7 +20,9 @@
     padding: 10px;
     background-color: olivedrab;
     margin: 20px;
+    margin-left: -10px;
     margin-bottom: 5px;
+    width: 100%;
 }
 
 #mainSearch{
@@ -67,4 +69,19 @@ font-size: large;
     height: fit-content;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: large;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: olivedrab;
+    height: 30px;
+}
+
+#titleContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
