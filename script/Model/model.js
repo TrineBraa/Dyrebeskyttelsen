@@ -1,7 +1,7 @@
 const model = {
     app: {
         user: '',
-        lang: 'Eng',
+        lang: 'No',
         currentPage: 'mainPage',
         page: [
             'mainPage',
