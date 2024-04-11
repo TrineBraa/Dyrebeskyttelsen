@@ -1,0 +1,70 @@
+* {
+    background-color: lightgoldenrodyellow;
+    
+}
+
+#logoContainer{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#logoMain{
+    height: 200px;
+    width: 250px;
+}
+
+#searchBarContainer{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: olivedrab;
+    margin: 20px;
+    margin-bottom: 5px;
+}
+
+#mainSearch{
+    width: 450px;
+    height: 25px;
+    border: none;
+    border-bottom: 2px solid;
+}
+
+#searchButton{
+    height: 25px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#mainButtonContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainButton{
+padding: 10px;
+margin: 10px;
+margin-top: 5px;
+cursor: pointer;
+border: none;
+background-color: olivedrab;
+border-radius: 20px;
+width: 250px;
+height: fit-content;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: large;
+}
+
+.activeButton{
+    background-color: darkolivegreen;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 20px;
+    width: 250px;
+    height: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+}
