@@ -2,7 +2,7 @@ const model = {
     app: {
         user: '',
         lang: 'No',
-        currentPage: 'contact',
+        currentPage: 'mainPage',
         page: [
             'mainPage',
             'dogPage',

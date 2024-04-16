@@ -1,4 +1,3 @@
-mainView()
 function mainView(){
     document.getElementById("app").innerHTML = /*HTML*/`
     ${makeHeader()}
