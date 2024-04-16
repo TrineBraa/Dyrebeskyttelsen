@@ -53,9 +53,10 @@ function contactSheet(){
     <div id="infoSheet">
         <h2>Før du kontakter oss</h2>
         <br/>
-        <p>Våre nettsider inneholder mye informasjon. vet å undersøke om du får svar på spørsmålet ditt her. 
-        Sparer du pss for å bruke tid som vi kan bruke på å hjelpe flere dyr. </P>
-
+        <p>Våre nettsider inneholder mye informasjon. Ved å undersøke om du får svar på spørsmålet ditt <a href="https://www.dyrebeskyttelsen.no/">her</a>. 
+        Sparer du oss for å bruke tid som vi kan bruke på å hjelpe flere dyr. </P>
+        <br/>
+        <br/>
         <b>Har du et annet spørsmål?</b>
         <br/>
         Fyll ut kontaktskjemaet under:<br/>
