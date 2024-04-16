@@ -11,6 +11,14 @@ function contactView(){
         </div>
 
 
-        ${makeFooter()}
+        ${makeContactFooter()}
     `; 
+}
+
+function makeContactFooter(){
+    let html = /*html*/ `
+    <div class ="contactFooter">
+    </div>
+    `;
+    return html;
 }

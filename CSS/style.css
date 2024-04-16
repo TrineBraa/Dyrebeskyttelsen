@@ -1,6 +1,5 @@
 * {
     background-color: lightgoldenrodyellow;
-    
 }
 
 #logoContainer{
@@ -84,4 +83,52 @@ font-size: large;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#aboutUsContainer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 40vb;
+    margin-left: 25px;
+    height: 40vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    box-shadow: 1px 3px olivedrab;
+    padding: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+#topContainer{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+#bottomContainers{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#frontPageImg{
+    height: 600px;
+    margin-left: 25px;
+}
+ 
+#aboutPageContainer{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    width: 40vb;
+    height: 20vh;
+    margin-left: 400px;
+    overflow: scroll;
+    overflow-x: hidden;
+    box-shadow: 1px 3px olivedrab;
+    padding: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
