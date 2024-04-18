@@ -1,0 +1,43 @@
+#titleContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#dogContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#profileDogImg{
+    height: 250px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#dogMainProfile{
+    text-align: left;
+}
+
+#textBoxDog{
+    margin-left: 30px;
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+#lineSplit{
+    border-bottom: 2px solid olivedrab;
+    margin-top: 20px;
+}
+
+#adoptedProfile{
+    text-align: center;
+}
+
+#adoptedDogImg{
+    height: 400px;
+}
+
+#textBoxAdopted{
+    text-align: left;
+    font-size: 20px;
+}
