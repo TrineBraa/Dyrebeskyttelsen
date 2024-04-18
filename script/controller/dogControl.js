@@ -1,10 +1,12 @@
 function viewDog(id){
+    console.log(id)
     model.app.dogToAdopt = id;
     model.app.currentPage = 'dogPage';
     adoptableDogView()
 }
 
 
-function returnButton(){
-    return `<button class="mainButton" onclick="adoptableDogView()">Tilbake til Hundene</button>`
+function backToAdoptableDogs(){
+    model.app.dogToAdopt = null;
+    adoptableDogView()
 }

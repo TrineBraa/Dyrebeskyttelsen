@@ -3,7 +3,7 @@ const model = {
         user: '',
         lang: 'No',
         currentPage: 'mainPage',
-        dogToAdopt: '',
+        dogToAdopt: null,
         page: [
             'mainPage',
             'dogPage',
@@ -59,7 +59,7 @@ const model = {
 
             },
             {
-                id: 2,
+                id: 3,
                 img: 'https://b3310731.smushcdn.com/3310731/wp-content/uploads/2023/05/schaferhund-sitter.jpg?lossy=2&strip=1&webp=1' ,
                 name: 'Rodrigo' ,
                 age: '9',

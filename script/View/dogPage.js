@@ -8,12 +8,13 @@ function adoptableDogView(){
         <button class="mainButton, activeButton" onclick = "adoptableDogView()">Tilgjengelige Hunder</button>
         <button class="mainButton" onclick = "adoptedView()">Adopterte Hunder</button>
     </div>
-    ${model.data.availibleDogs.id == model.app.dogToAdopt ? `<button class="mainButton" onclick="adoptableDogView()">Tilbake til Hundene</button>` : ``};
-
+    
     <div id="titleContainer">
     <h1>Tilgjengelige for Adopsjon</h1>
+    ${model.app.dogToAdopt != null ? `<button class="mainButton" onclick="backToAdoptableDogs()">Tilbake til Hundene</button>` : ``}
+    ${model.app.dogToAdopt != null ? `` : `<span>Trykk på bildene for mer informasjon om hunden.</span>`}
         <div id="dogContainer">
-            ${model.data.availibleDogs.id == model.app.dogToAdopt ? `${drawChoosenDog(choosenDog)}`:`${drawAvailibleDogs()}`}
+            ${model.app.dogToAdopt != null ? drawChoosenDog() : drawAvailibleDogs()}
         </div>
     </div>
 
@@ -24,12 +25,13 @@ function adoptableDogView(){
 }
 
 function drawAvailibleDogs(){
+    
     let html = '';
     for(let i = 0; i<model.data.availibleDogs.length; i++){
         let dog = model.data.availibleDogs[i]
         html += /*HTML*/ `
         <div id="dogMainProfile">
-        <img id="profileDogImg" onclick="viewDog(id)" src="${dog.img}">
+        <img id="profileDogImg" onclick="viewDog(${dog.id})" src="${dog.img}">
             <div id="textBoxDog">
                 <div><b>Navn:</b> ${dog.name}</div>
                 <div><b>Kjønn:</b> ${dog.gender}</div>
@@ -44,15 +46,16 @@ function drawAvailibleDogs(){
     return html;
 }
 
-function drawChoosenDog(dogToAdopt){
+function drawChoosenDog(){
+    let choosenDog = model.data.availibleDogs.find((Dog) => Dog.id == model.app.dogToAdopt)
     let html = ``;
     html = `<div> 
-                <h1>${dogToAdopt.name}</h1>
-                <img src="${dogToAdopt.img}"></img>
+                <h1>${choosenDog.name}</h1>
+                <img src="${choosenDog.img}"></img>
                 <div id="">
-                    <div>Kjønn: ${dogToAdopt.gender} Alder: ${dogToAdopt.age} Rase: ${dogToAdopt.breed}</div>
+                    <div>Kjønn: ${choosenDog.gender} Alder: ${choosenDog.age} Rase: ${choosenDog.breed}</div>
                 </div>
             </div>
-`;
-return html;
+    `;
+    return html;
 }
