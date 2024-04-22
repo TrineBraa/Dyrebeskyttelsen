@@ -49,13 +49,27 @@ function drawAvailibleDogs(){
 function drawChoosenDog(){
     let choosenDog = model.data.availibleDogs.find((Dog) => Dog.id == model.app.dogToAdopt)
     let html = ``;
-    html = `<div> 
+    html = `<div>
+                <br/>
+                <div class="AdoptableDogButtons">
+                    <button class="mainButton" onclick ="planMeetView()">Møt ${choosenDog.name}</button><button class="mainButton" onclick="dogOnHoldView()">Reserver ${choosenDog.name}</button> 
+                </div>
+                <br/>
                 <h1>${choosenDog.name}</h1>
                 <img src="${choosenDog.img}"></img>
                 <div id="">
-                    <div>Kjønn: ${choosenDog.gender} Alder: ${choosenDog.age} Rase: ${choosenDog.breed}</div>
+                    <div><b>Kjønn:</b> ${choosenDog.gender} <b>Alder:</b> ${choosenDog.age} <b>Rase:</b> ${choosenDog.breed}</div>
+                    <div>
+                        <h3>Om ${choosenDog.name}</h3>
+                        ${choosenDog.aboutDog}
+                    </div>
                 </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </div>
+       
     `;
     return html;
 }

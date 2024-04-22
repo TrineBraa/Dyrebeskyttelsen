@@ -1,11 +1,13 @@
 * {
     background-color: lightgoldenrodyellow;
+   
 }
 
 #logoContainer{
     display: flex;
     align-content: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 #logoMain{
