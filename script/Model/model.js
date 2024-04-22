@@ -1,9 +1,11 @@
 const model = {
     app: {
+        APIKey: 'sdtdDAPMDN5k2oqaDdfYFw==x5ASKJiWlFbnQW39', 
         user: '',
         lang: 'No',
         currentPage: 'mainPage',
         dogToAdopt: null,
+        breedToSearch: null,
         page: [
             'mainPage',
             'dogPage',
@@ -14,6 +16,7 @@ const model = {
             'planAMeet',
             'contact',
             'adoptedPage',
+            'searchBreedPage',
         ]
     },
     inputs: {
@@ -37,6 +40,17 @@ const model = {
         },
     },
     data: {
+        breedInfo: {
+            name: null,
+            img: null,
+            energy: null,
+            drooling: null,
+            shedding: null,
+            barking: null,
+            good_with_children: null,
+            good_with_other_dogs: null,
+            trainability: null,
+        },
         availibleDogs: [
             {
                 id: 1,

@@ -1,11 +1,8 @@
+// mainView()
 function mainView(){
     document.getElementById("app").innerHTML = /*HTML*/`
     ${makeHeader()}
-    <div id="mainButtonContainer">
-        <button class="mainButton" onclick = "contactView()">Kontakt oss</button>
-        <button class="mainButton" onclick = "adoptableDogView()">Tilgjengelige Hunder</button>
-        <button class="mainButton" onclick = "adoptedView()">Adopterte Hunder</button>
-    </div>
+    ${makeMainButtons()}
     <div id="titleContainer">
         <h1>Dyrebeskyttelsen Norge</h1>
     </div>
@@ -22,7 +19,7 @@ function mainView(){
     </div>
     <div id="bottomContainers">
         <div>
-            <button class="mainButton">ubrukt knapp for nå</button>
+            <button class="mainButton" onclick="searchBreedView()">Her kan du søke om hunderaser</button>
         </div>
         <div id="aboutPageContainer">
             ${thisWebpage()}
@@ -51,6 +48,15 @@ function makeHeader(){
   
     `;
     return html;
+}
+
+
+function makeMainButtons(){
+    return `<div id="mainButtonContainer">
+    <button class="mainButton" onclick = "contactView()">Kontakt oss</button>
+    <button class="mainButton" onclick = "adoptableDogView()">Tilgjengelige Hunder</button>
+    <button class="mainButton" onclick = "adoptedView()">Adopterte Hunder</button>
+</div>`
 }
 
 function makeFooter(){

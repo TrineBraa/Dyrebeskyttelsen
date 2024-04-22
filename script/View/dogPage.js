@@ -1,4 +1,4 @@
-adoptableDogView()
+
 function adoptableDogView(){
     let choosenDog = model.data.availibleDogs.find((Dog) => Dog.id == model.app.dogToAdopt)
     document.getElementById("app").innerHTML = /*HTML*/ `

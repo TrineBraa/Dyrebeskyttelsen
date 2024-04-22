@@ -8,4 +8,5 @@ function viewSwitcher(){
     if (currentPage == 'planAMeet') planMeetView();
     if (currentPage == 'contact') contactView();
     if (currentPage == 'adoptedPage') adoptedView();
+    if (currentPage == 'searchBreedPage') searchBreedView();
 }
