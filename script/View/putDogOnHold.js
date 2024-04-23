@@ -3,9 +3,23 @@ function dogOnHoldView(){
     document.getElementById("app").innerHTML = /*HTML*/ `
     ${makeHeader()}
     <button class="mainButton" onclick="adoptableDogView()">Tilbake</button>
-    <h1>Vil du reservere ${choosenDog.name}</h1>
+    <div class="meetTopContainer">
+        <h1>Vil du reservere ${choosenDog.name}</h1>
+        <br/>
+        <span>Når du har møtt en hund og tenker den hunden er den rette for din familie kan du reservere den.
+        <br/> Dette er for at ikke du skal miste en hund du tror du vil adoptere, og samtidig ønsker vi ikke at flere skal ha et håp om å få en hund noen andre er ute etter.
+        Vi har dermed satt reservasjon på hunder så når noen planlegger et møte kan se at denne hunden muligens er i ferd med å bli adoptert. 
+        <br/>En reservasjon står i en ukes tid og om hunden ikke er adoptert innen den tid vil reservasjonen fjernes og hunden vil være åpen for andre reservasjoner.
+        <br/>Du vil måtte betale litt for å reservere en hund. </span> 
+        <br/>
+        <input placeholder="Navn">
+        <input placeholder="Telefon Nr">
+        <input placeholder="Epost">
+        
+        <span>Det koster 500 kr for å reservere ${choosenDog.name}</span>
 
-
+        <button class="mainButton">Reserver ${choosenDog.name}</button>
+    </div>
     ${makeFooter()}
     `; 
 }

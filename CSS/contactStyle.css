@@ -81,3 +81,27 @@
     border-collapse: collapse;
     height: 30px;
 }
+
+.meetInputs{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 20px;
+}
+
+.inputForMeet{
+    margin: 10px;
+    border: solid olivedrab 2px;
+    height: 30px;
+}
+
+.meetTopContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+span{
+    width: 500px;
+}
