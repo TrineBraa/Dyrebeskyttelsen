@@ -12,12 +12,16 @@ function dogOnHoldView(){
         <br/>En reservasjon står i en ukes tid og om hunden ikke er adoptert innen den tid vil reservasjonen fjernes og hunden vil være åpen for andre reservasjoner.
         <br/>Du vil måtte betale litt for å reservere en hund. </span> 
         <br/>
+        <div class="meetInputs">
         <input class="inputForMeet" placeholder="Navn">
         <input class="inputForMeet" placeholder="Telefon Nr">
         <input class="inputForMeet" placeholder="Epost">
+        </div>
         
         <span>Det koster 500 kr for å reservere ${choosenDog.name}</span>
-
+    <br/>
+    <br/>
+    <br/>
         <button class="mainButton">Reserver ${choosenDog.name}</button>
     </div>
     ${makeFooter()}
