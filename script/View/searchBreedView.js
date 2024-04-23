@@ -6,7 +6,7 @@ function searchBreedView(){
     <br/>
     
     <br/>
-    <div class="BreedInfoContainer">
+    <div id="BreedInfoContainer">
     Her kan du søke om ekstra informasjon om en hunderase. Søkeordet må være på Engelsk.
     <br/>
     <br/>
@@ -25,41 +25,42 @@ return /*HTML*/`
         <img src="${model.data.breedInfo.img ?? ''}" >
 
         <div id="dogBreedInfo">
-            <div id="infoAboutBreed">
-                <h3>Energi-nivå:</h3> 
+                <div class="infoAboutBreed">
+                    <h3>Energi-nivå:</h3> 
                     <div>${makeStar(model.data.breedInfo.energy) ?? ''}</div>
                 </div>
                 <br/>
-                <div>
-                <h3>Siklemengde:</h3> 
+                <div  class="infoAboutBreed">
+                    <h3>Siklemengde:</h3> 
                     <div>${makeStar(model.data.breedInfo.drooling) ?? ''}</div>
                 </div>
                 <br/>
-                <div>
-                <h3>Røytemengde:</h3> 
+                <div  class="infoAboutBreed">
+                    <h3>Røytemengde:</h3> 
                     <div>${makeStar(model.data.breedInfo.shedding) ?? ''}</div>
                 </div>
                 <br/>
-                <div>
-                <h3>Støy-nivå:</h3> 
+                <div  class="infoAboutBreed">
+                    <h3>Støy-nivå:</h3> 
                     <div>${makeStar(model.data.breedInfo.barking) ?? ''}</div>
                 </div>
                 <br/>
-                <div>
-                <h3>Flink med Barn:</h3> 
+                <div  class="infoAboutBreed">
+                    <h3>Flink med Barn:</h3> 
                     <div>${makeStar(model.data.breedInfo.good_with_children) ?? ''}</div>
                 </div>
-                <BR/>
-                <div>
-                <h3>Flink med andre Hunder:</h3> 
+                <br/>
+                <div  class="infoAboutBreed">
+                    <h3>Flink med andre Hunder:</h3> 
                     <div>${makeStar(model.data.breedInfo.good_with_other_dogs) ?? ''}</div>
                 </div>
                 <br/>
-                <div>
-                <h3>Treningsvillighet:</h3> 
+                <div  class="infoAboutBreed">
+                    <h3>Treningsvillighet:</h3> 
                     <div>${makeStar(model.data.breedInfo.trainability) ?? ''}</div>
                 </div>
             </div>
+        <br/>
         <br/>
         <br/>
         <br/>

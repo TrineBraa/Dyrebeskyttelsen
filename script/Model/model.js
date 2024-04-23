@@ -22,6 +22,7 @@ const model = {
     inputs: {
         mainpage: {
             Searchbar: '',
+            inputSearch: null,
         },
         dogPage: {
             Searchbar: '',

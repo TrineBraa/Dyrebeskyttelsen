@@ -42,8 +42,7 @@ function makeHeader(){
         <img id="logoMain" onclick="mainView()" src= https://kommunikasjon.ntb.no/data/images/00539/a81ddc71-603d-4af3-a4aa-ec40b5c0ee68.png/>
     </div>
     <div id="searchBarContainer">
-        <input id="mainSearch" placeholder="Søk" onchange="">
-        <button id="searchButton">Søk</button>
+       ${searchBarMain()}
    </div>
   
     `;
@@ -106,4 +105,66 @@ function thisWebpage(){
     `;
 
     return html;
+}
+
+
+function searchBarMain(){
+    return `
+    <div class="inputHolder">
+    <input id="mainSearch" placeholder="Søk" autocomplete="off" onchange="">
+    <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    <div class="resultBox">
+    </div>
+   `;
+}
+
+const resultBox = document.getElementById("resultBox")
+
+
+mainSearch.onkeyup = function (){
+    let result = [];
+    let input = mainSearch.value;
+    if (input.length){
+        result = availibleKeywords.filter((keyword) => {
+            return keyword.toLowerCase().includes(input.toLowerCase());
+        });
+    }
+    display(result);
+    if (!result.length){
+        resultBox.innerHTML = '';
+    }
+}
+
+function display(result){
+    const content = result.map((item) => {
+        return "<li onclick=selectInput('" + item +"')>" + item + "</li>";
+    });
+    resultBox.innerHTML = "<ul>" + content.join('') + "</ul>";
+}
+
+function selectInput (item){
+    switch (item) {
+        case "Hovedside":
+            mainView();
+        break;
+        case "Hunder til Adopsjon":
+            adoptableDogView();
+        break;
+        case "Adopterte hunder":
+            adoptedView();
+        break;
+        case "kontakt oss":
+            contactView();
+        break;
+        case "Informasjon om hunderaser":
+            searchBreedView();
+        break;
+        case "hjelp":
+            display(availibleKeywords);
+        break;
+
+        default:
+            break;
+    }
 }

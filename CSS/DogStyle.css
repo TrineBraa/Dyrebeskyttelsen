@@ -42,19 +42,6 @@
     font-size: 20px;
 }
 
-#dogBreedInfo{
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 40px;
-    width: 900px;
-    }
-
-#infoAboutBreed{
-    padding: 20px;
-    margin-left: 40px;
-    margin-right: 70px;
-}
-
 .SearchBreed{
     width: 450px;
     height: 35px;
@@ -62,16 +49,27 @@
     border-bottom: 2px solid olivedrab;
 }
 
-#BreedInfoContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .AdoptableDogButtons{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-content: center;
+}
+
+#BreedInfoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+#dogBreedInfo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
+.infoAboutBreed{
+    padding: 20px;
 }
