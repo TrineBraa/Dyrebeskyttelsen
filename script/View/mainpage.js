@@ -111,60 +111,60 @@ function thisWebpage(){
 function searchBarMain(){
     return `
     <div class="inputHolder">
-    <input id="mainSearch" placeholder="Søk" autocomplete="off" onchange="">
+    <input id="mainSearch" placeholder="Søk" autocomplete="off">
     <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
-    <div class="resultBox">
-    </div>
+    <div class="resultBox"></div>
    `;
 }
 
-const resultBox = document.getElementById("resultBox")
+// const resultBox = document.getElementById("resultBox")
 
 
-mainSearch.onkeyup = function (){
-    let result = [];
-    let input = mainSearch.value;
-    if (input.length){
-        result = availibleKeywords.filter((keyword) => {
-            return keyword.toLowerCase().includes(input.toLowerCase());
-        });
-    }
-    display(result);
-    if (!result.length){
-        resultBox.innerHTML = '';
-    }
-}
+// mainSearch.onkeyup = function (){
+//     let result = [];
+//     let input = mainSearch.value;
+//     if (input.length){
+//         result = availibleKeywords.filter((keyword) => {
+//             return keyword.toLowerCase().includes(input.toLowerCase());
+//         });
+//     }
+//     display(result);
+//     if (!result.length){
+//         resultBox.innerHTML='';
+//     }
+    
+// }
 
-function display(result){
-    const content = result.map((item) => {
-        return "<li onclick=selectInput('" + item +"')>" + item + "</li>";
-    });
-    resultBox.innerHTML = "<ul>" + content.join('') + "</ul>";
-}
+// function display(result){
+//     const content = result.map((list) => {
+//         return "<li onclick=selectInput(this)>" + list + "</li>";
+//     });
+//     resultBox.innerHTML = "<li>" + content.join('') + "</li>";
+// }
 
-function selectInput (item){
-    switch (item) {
-        case "Hovedside":
-            mainView();
-        break;
-        case "Hunder til Adopsjon":
-            adoptableDogView();
-        break;
-        case "Adopterte hunder":
-            adoptedView();
-        break;
-        case "kontakt oss":
-            contactView();
-        break;
-        case "Informasjon om hunderaser":
-            searchBreedView();
-        break;
-        case "hjelp":
-            display(availibleKeywords);
-        break;
+// function selectInput (list){
+//     switch (list) {
+//         case "Hovedside":
+//             mainView();
+//         break;
+//         case "Hunder til Adopsjon":
+//             adoptableDogView();
+//         break;
+//         case "Adopterte hunder":
+//             adoptedView();
+//         break;
+//         case "kontakt oss":
+//             contactView();
+//         break;
+//         case "Informasjon om hunderaser":
+//             searchBreedView();
+//         break;
+//         case "hjelp":
+//             display(availibleKeywords);
+//         break;
 
-        default:
-            break;
-    }
-}
+//         default:
+//             break;
+//     }
+// }
