@@ -1,4 +1,5 @@
 function viewSwitcher(){
+    let currentPage = model.app.currentPage
     if (currentPage == 'mainPage') mainView();
     if (currentPage == 'dogPage') adoptableDogView();
     if (currentPage == 'infoDogPage') infoDogView();

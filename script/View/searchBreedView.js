@@ -1,5 +1,6 @@
 
 function searchBreedView(){ 
+    model.app.currentPage = 'searchBreedPage';
     document.getElementById('app').innerHTML = /*HTML*/`
     ${makeHeader()}
     ${makeMainButtons()}

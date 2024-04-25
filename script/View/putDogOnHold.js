@@ -1,4 +1,5 @@
 function dogOnHoldView(){
+    model.app.currentPage = 'putDogOnHold';
     let choosenDog = model.data.availibleDogs.find((Dog) => Dog.id == model.app.dogToAdopt)
     document.getElementById("app").innerHTML = /*HTML*/ `
     ${makeHeader()}

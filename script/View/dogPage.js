@@ -1,5 +1,6 @@
 
 function adoptableDogView(){
+    model.app.currentPage = 'dogPage';
     let choosenDog = model.data.availibleDogs.find((Dog) => Dog.id == model.app.dogToAdopt)
     document.getElementById("app").innerHTML = /*HTML*/ `
     ${makeHeader()}

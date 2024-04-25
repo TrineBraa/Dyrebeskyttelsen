@@ -1,5 +1,6 @@
 // mainView()
 function mainView(){
+    model.app.currentPage = 'mainPage';
     document.getElementById("app").innerHTML = /*HTML*/`
     ${makeHeader()}
     ${makeMainButtons()}
@@ -111,11 +112,26 @@ function thisWebpage(){
 function searchBarMain(){
     return `
     <div class="inputHolder">
-    <input id="mainSearch" placeholder="Søk" autocomplete="off">
-    <button id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <input id="mainSearch" value="${model.inputs.searchbar ?? ''}" placeholder="Søk" oninput="setSearchTerm(this)" autocomplete="off">
+    <button id="searchButton" onclick="setSearchTerm(mainSearch.value)"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
-    <div class="resultBox"></div>
+    <div id="searchResults"></div>
    `;
+}
+
+function getSearchResults(){
+    document.getElementById('searchResults').innerHTML = ''
+    if(model.inputs.searchbar == null || model.inputs.searchbar == '') return html
+    for (let i = 0; i < model.app.page.length; i++) {
+        if (model.app.page[i].isSearchable && model.app.page[i].description.includes(model.inputs.searchbar)){
+            document.getElementById('searchResults').innerHTML += `<div class="searchResult" onclick="changeView('${model.app.page[i].id}')">${model.app.page[i].description}</div>`
+        }
+    }
+}
+
+function changeView(pageID){
+    model.app.currentPage = pageID;
+    viewSwitcher()
 }
 
 // const resultBox = document.getElementById("resultBox")

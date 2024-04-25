@@ -1,4 +1,5 @@
 function adoptedView(){
+    model.app.currentPage = 'dogPage';
     document.getElementById("app").innerHTML = /*HTML*/ `
     ${makeHeader()}
     <div id="mainButtonContainer">

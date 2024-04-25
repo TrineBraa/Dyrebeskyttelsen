@@ -1,4 +1,5 @@
 function contactView(){
+    model.app.currentPage = 'contact';
     document.getElementById("app").innerHTML = /*HTML*/ `
     ${makeHeader()}
     <div id="mainButtonContainer">

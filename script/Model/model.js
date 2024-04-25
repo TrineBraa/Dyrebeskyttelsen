@@ -7,26 +7,22 @@ const model = {
         dogToAdopt: null,
         breedToSearch: null,
         page: [
-            'mainPage',
-            'dogPage',
-            'infoDogPage',
-            'infoBreedPage',
-            'adoptDogPage',
-            'putDogOnHold',
-            'planAMeet',
-            'contact',
-            'adoptedPage',
-            'searchBreedPage',
+            {id: 'mainPage', description: 'Hjem', isSearchable: true},
+            {id: 'dogPage', description: 'Tilgjengelige hunder', isSearchable: true},
+            {id: 'infoDogPage', description: 'Info om hunden', isSearchable: false},
+            {id: 'infoBreedPage', description: '', isSearchable: false},
+            {id: 'adoptDogPage', description: 'Adopter hund', isSearchable: false},
+            {id: 'putDogOnHold', description: 'Reserver hund', isSearchable: false},
+            {id: 'planAMeet', description: 'Planlegg møte', isSearchable: false},
+            {id: 'contact', description: 'Kontakt oss', isSearchable: true},
+            {id: 'adoptedPage', description: 'Alle våre adopterte hunder', isSearchable: true},
+            {id: 'searchBreedPage', description: 'Rase Informasjon', isSearchable: true},
+         
         ]
     },
     inputs: {
-        mainpage: {
-            Searchbar: '',
-            inputSearch: null,
-        },
-        dogPage: {
-            Searchbar: '',
-        },
+        searchbar: null,
+        mainpage: {},
         planAMeet: {
             inputName: '',
             inputMail: '',
